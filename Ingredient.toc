@@ -1,0 +1,8 @@
+## Interface: 60000
+## Title: Ingredient
+## Notes: Got recipes for it?
+## DefaultState: Enabled
+## LoadOnDemand: 0
+## Author: Evil Duck
+## SavedVariablesPerCharacter: IngredientRegistry
+Ingredient.lua
