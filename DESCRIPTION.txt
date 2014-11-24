@@ -1,7 +1,6 @@
 Display if an item can be used for any of your known crafting profession recipes.
 
 At item mouse-over, a text will be added to the tooltip if the item can
-be used to craft something by your character. If it is a crafting ingredient
-and you do not have any recipe that can use this item, it won't be
-counted.
+be used to craft something by your character.
 Gray, green, yellow and orange color coded recipes are counted separately.
+Chat command: "/ingr reset" - Do this if you abandon a profession.
