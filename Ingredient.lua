@@ -1,5 +1,5 @@
 ﻿--[[****************************************************************
-	Ingredient v1.00
+	Ingredient v1.02
 
 	Author: Evil Duck
 	****************************************************************
@@ -17,6 +17,7 @@
 
 	****************************************************************]]
 
+-- 1.02 bug-fix for not forgetting tooltip item
 -- 1.00 First version: "Recipes: orange/yellow/green/gray/red", shift-list
 --		with all ingredients
 
@@ -56,7 +57,7 @@ local function onEvent(_,event,...) if (ihf[event]) then ihf[event](...); return
 ihf:SetScript("OnEvent",onEvent);
 
 local function onUpdate()
-	if (not GameTooltip or not GameTooltip:IsVisible()) then return; end
+	if (not GameTooltip or not GameTooltip:IsVisible()) then ihf.hookBag=nil; ihf.hookTab=nil; return; end
 	if (ihf.showExpanded==IsShiftKeyDown()) then return; end
 	ihf.showExpanded=IsShiftKeyDown();
 	if (ihf.hookBag) then ihf.hookBagItem(GameTooltip,ihf.hookBag,ihf.hookSlot); end
